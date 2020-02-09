@@ -1,0 +1,847 @@
+fileFormatVersion: 2
+guid: 17deb3b50b89eda45bdccf1ba5353730
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 388806837434506151
+    second: SisterMotion 1_0
+  - first:
+      213: -7653873198096880905
+    second: SisterMotion 1_1
+  - first:
+      213: 6781174157312111284
+    second: SisterMotion 1_2
+  - first:
+      213: -1083700507849853828
+    second: SisterMotion 1_3
+  - first:
+      213: -7266600092561242933
+    second: SisterMotion 1_4
+  - first:
+      213: 4951422365416569576
+    second: SisterMotion 1_5
+  - first:
+      213: 3315545562011957058
+    second: SisterMotion 1_6
+  - first:
+      213: 6646672399803300350
+    second: SisterMotion 1_7
+  - first:
+      213: 5535950751821305909
+    second: SisterMotion 1_8
+  - first:
+      213: 6452728105408179367
+    second: SisterMotion 1_9
+  - first:
+      213: -8005171235532483992
+    second: SisterMotion 1_10
+  - first:
+      213: 191647141454745079
+    second: SisterMotion 1_11
+  - first:
+      213: -192147755362065237
+    second: SisterMotion 1_12
+  - first:
+      213: -6144207023287706834
+    second: SisterMotion 1_13
+  - first:
+      213: 3781809169149476036
+    second: SisterMotion 1_14
+  - first:
+      213: -7389216541395004569
+    second: SisterMotion 1_16
+  - first:
+      213: -6369417267083219507
+    second: SisterMotion 1_17
+  - first:
+      213: -423876316373098217
+    second: SisterMotion 1_18
+  - first:
+      213: 8460849208371365909
+    second: SisterMotion 1_19
+  - first:
+      213: -722234985449809610
+    second: SisterMotion 1_20
+  - first:
+      213: 7026248273941384900
+    second: SisterMotion 1_22
+  - first:
+      213: 5104270391333888843
+    second: SisterMotion 1_23
+  - first:
+      213: -7052810371904250080
+    second: SisterMotion 1_24
+  - first:
+      213: -3754447726825226929
+    second: SisterMotion 1_25
+  - first:
+      213: -2743904154134810938
+    second: SisterMotion 1_26
+  - first:
+      213: 8426487108988034526
+    second: SisterMotion 1_27
+  - first:
+      213: -1763613958465526667
+    second: SisterMotion 1_28
+  - first:
+      213: -7835734170266952702
+    second: SisterMotion 1_29
+  - first:
+      213: 3342213311529557580
+    second: SisterMotion 1_30
+  externalObjects: {}
+  serializedVersion: 10
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: -1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: iPhone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: SisterMotion 1_0
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 381
+        width: 33
+        height: 130.00003
+      alignment: 9
+      pivot: {x: 0.5, y: 0.49999988}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6487c56bfdcb8f149a1bfde998ab17e5
+      internalID: 388806837434506151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SisterMotion 1_1
+      rect:
+        serializedVersion: 2
+        x: 65
+        y: 427
+        width: 50
+        height: 79
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 967463f6f2253a246a6b78a1152b4cfd
+      internalID: -7653873198096880905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SisterMotion 1_2
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 395
+        width: 84
+        height: 120
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b96bb8c1e38355f428091f37b2d2e611
+      internalID: 6781174157312111284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SisterMotion 1_3
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 372
+        width: 72
+        height: 143
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b5a8dd939373fa4d8d0a9e97d61e1a3
+      internalID: -1083700507849853828
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SisterMotion 1_4
+      rect:
+        serializedVersion: 2
+        x: 420
+        y: 441
+        width: 46
+        height: 70.00003
+      alignment: 9
+      pivot: {x: 0.5, y: 0.49999976}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 617843ddbbaa0044dbdf279a0a3217ce
+      internalID: -7266600092561242933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SisterMotion 1_5
+      rect:
+        serializedVersion: 2
+        x: 504.00003
+        y: 428
+        width: 108.99997
+        height: 65
+      alignment: 9
+      pivot: {x: 0.49999985, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9c70683008ea71d4e9a9ca0c8a0ebc7f
+      internalID: 4951422365416569576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SisterMotion 1_6
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 357
+        width: 28
+        height: 42
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a9c4f6998acfa884dbadd106d5abc453
+      internalID: 3315545562011957058
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SisterMotion 1_7
+      rect:
+        serializedVersion: 2
+        x: 242
+        y: 352
+        width: 37
+        height: 66
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 779de0fecf613a144882f300a2f7e51c
+      internalID: 6646672399803300350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SisterMotion 1_8
+      rect:
+        serializedVersion: 2
+        x: 470
+        y: 342
+        width: 41
+        height: 57
+      alignment: 9
+      pivot: {x: 0.49999997, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fee777fbb7a27364d9ac8ab4956723c6
+      internalID: 5535950751821305909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SisterMotion 1_9
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 288
+        width: 25
+        height: 48
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0fde42635b2c08f4686fc4a55304154b
+      internalID: 6452728105408179367
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SisterMotion 1_10
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 299
+        width: 15
+        height: 20
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 498e2b0b082a19645a6616d1b77b51fa
+      internalID: -8005171235532483992
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SisterMotion 1_11
+      rect:
+        serializedVersion: 2
+        x: 82.400185
+        y: 277.85022
+        width: 28.599823
+        height: 44.14978
+      alignment: 9
+      pivot: {x: 0.45803833, y: 0.46772102}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95997a9cf92035f4d91f25bd0d3781c7
+      internalID: 191647141454745079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SisterMotion 1_12
+      rect:
+        serializedVersion: 2
+        x: 175
+        y: 297
+        width: 27
+        height: 41
+      alignment: 9
+      pivot: {x: 0.5, y: 0.49999997}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4ff5262776aa914993904300e048ad6
+      internalID: -192147755362065237
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SisterMotion 1_13
+      rect:
+        serializedVersion: 2
+        x: 246.00002
+        y: 273
+        width: 31.999985
+        height: 55
+      alignment: 9
+      pivot: {x: 0.49999976, y: 0.49999997}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 573d1db6a14d20943a273be8036b0ddf
+      internalID: -6144207023287706834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SisterMotion 1_14
+      rect:
+        serializedVersion: 2
+        x: 340
+        y: 256
+        width: 46
+        height: 66
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f78ace08703a89a41ac3c441382220bd
+      internalID: 3781809169149476036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SisterMotion 1_16
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 206
+        width: 26
+        height: 55
+      alignment: 9
+      pivot: {x: 0.5, y: 0.49999997}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 029072acf3bb36e4ca6eb0e59da914a9
+      internalID: -7389216541395004569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SisterMotion 1_17
+      rect:
+        serializedVersion: 2
+        x: 137
+        y: 242
+        width: 26
+        height: 45
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 89d52125c8c51734cba5ef0c11168a4d
+      internalID: -6369417267083219507
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SisterMotion 1_18
+      rect:
+        serializedVersion: 2
+        x: 209
+        y: 209
+        width: 31
+        height: 49
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3f682d4761dfc44fb479818ebb21596
+      internalID: -423876316373098217
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SisterMotion 1_19
+      rect:
+        serializedVersion: 2
+        x: 438.6
+        y: 191.26524
+        width: 63.303894
+        height: 98.73476
+      alignment: 9
+      pivot: {x: 0.46442628, y: 0.47333643}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cc8e012a399b984f9dee8cb0b3edf17
+      internalID: 8460849208371365909
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SisterMotion 1_20
+      rect:
+        serializedVersion: 2
+        x: 256
+        y: 224
+        width: 40
+        height: 28
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac59c5b297f888f4a9d769cfb93d48ca
+      internalID: -722234985449809610
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SisterMotion 1_22
+      rect:
+        serializedVersion: 2
+        x: 88.00001
+        y: 204
+        width: 43.999992
+        height: 28
+      alignment: 9
+      pivot: {x: 0.4999999, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d1e6dff335d41a45ad434da1ce82bc8
+      internalID: 7026248273941384900
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SisterMotion 1_23
+      rect:
+        serializedVersion: 2
+        x: 47
+        y: 164
+        width: 31
+        height: 52
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c630cde04f4bfc946b4e8cb044865bab
+      internalID: 5104270391333888843
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SisterMotion 1_24
+      rect:
+        serializedVersion: 2
+        x: 155.00002
+        y: 172
+        width: 42.999985
+        height: 31
+      alignment: 9
+      pivot: {x: 0.4999998, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c59e8e8fe0b1444db023def34c871c9
+      internalID: -7052810371904250080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SisterMotion 1_25
+      rect:
+        serializedVersion: 2
+        x: 233.00002
+        y: 189
+        width: 40.999985
+        height: 27
+      alignment: 9
+      pivot: {x: 0.4999998, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10b0485f87c2aba4083d939fc6597cd1
+      internalID: -3754447726825226929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SisterMotion 1_26
+      rect:
+        serializedVersion: 2
+        x: 278
+        y: 158
+        width: 34
+        height: 63
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9a9e985f8fad9c246a6d2acac080b841
+      internalID: -2743904154134810938
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SisterMotion 1_27
+      rect:
+        serializedVersion: 2
+        x: 89
+        y: 11
+        width: 71
+        height: 152
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f461beb3370554c458ea39e5c83b2054
+      internalID: 8426487108988034526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SisterMotion 1_28
+      rect:
+        serializedVersion: 2
+        x: 371.99997
+        y: 129
+        width: 38.00003
+        height: 55
+      alignment: 9
+      pivot: {x: 0.5000004, y: 0.49999997}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e367b8c6a5dc304298e1bed8971c270
+      internalID: -1763613958465526667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SisterMotion 1_29
+      rect:
+        serializedVersion: 2
+        x: 468.99997
+        y: 62
+        width: 98.00003
+        height: 123
+      alignment: 9
+      pivot: {x: 0.5000002, y: 0.49999997}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b94146d9be43ecf4daa82ab22de3f8c7
+      internalID: -7835734170266952702
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: SisterMotion 1_30
+      rect:
+        serializedVersion: 2
+        x: 236
+        y: 11
+        width: 69
+        height: 112
+      alignment: 9
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 72bc0c9ad3b94e44e999d552bfd453ab
+      internalID: 3342213311529557580
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 31ab7b2f6bc4d554d87c89b536615456
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 637089894835744237
+  assetBundleName: 
+  assetBundleVariant: 
