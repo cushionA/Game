@@ -118,14 +118,35 @@ public class SisterMove : MonoBehaviour
         //アタックを入れるとこ
 
 
-        Attack();
-       
+
+      
+        float fireKey = Input.GetAxis("Fire1");
 
 
+        if (fireKey > 0 && !move.isAttackDisabled()) //&& beforeAttack == 0.0f)
+        {
+            isAttack = true;
+            horizontalkey = 0.0f;
+            move.disableFinishAt = 0.0f;
+
+
+        }
+
+        else
+        {
+            isAttack = false;
+        }
+        //beforeAttack = fireKey;
+
+        if (isAttack)
+        {
+            move.DisableAttack();
+
+        }
 
     }
 
-        private void OnTriggerEnter2D(Collider2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
         {
             if (collision.tag == groundTag)
             {
@@ -150,25 +171,12 @@ public class SisterMove : MonoBehaviour
     public void Attack()
     {
 
-        float horizontalkey = Input.GetAxis("Horizontal");
-        float fireKey = Input.GetAxis("Fire1");
-
-
-        if (fireKey > 0 && !move.isJumpDisabled()) //&& beforeAttack == 0.0f)
-        {
-            isAttack = true;
-            horizontalkey = 0.0f;
-
-        }
-
-        else
-        {
-            isAttack = false;
-        }
-        //beforeAttack = fireKey;
-        move.disableJump();
+    
+       
     }
    
+
+
 
 }
 
