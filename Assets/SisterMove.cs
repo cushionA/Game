@@ -12,6 +12,10 @@ public class SisterMove : MonoBehaviour
     public AnimationCurve dashCurve;
     public AnimationCurve jumpCurve;
     public GameObject sister;
+    public float stepOnRate;
+    MoveObject moveObj;
+
+
     PlayerActionManager move;
 
     //変数を宣言
@@ -21,17 +25,26 @@ public class SisterMove : MonoBehaviour
     string groundTag = "Ground";
     bool isGround = false;
     bool isGroundEnter, isGroundStay, isGroundExit;
+    string moveFloorTag = "MoveFloor";
     bool isJump = false;
     bool isAttack = false;
     float jumpPos = 0.0f;
     float dashTime, jumpTime;
     float beforeAttack;
+    float stepOnHeight;
+    float judgePos;
+    CapsuleCollider2D capcol;
+    string enemyTag = "Enemy";
+    bool isDown;
+
+
 
     void Start()
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         move = sister.GetComponent<PlayerActionManager>();
+
     }
 
     // Update is called once per frame
@@ -49,6 +62,7 @@ public class SisterMove : MonoBehaviour
         {
             isGround = false;
         }
+
 
         float horizontalkey = Input.GetAxis("Horizontal");
         float xSpeed = 0.0f;
@@ -119,7 +133,7 @@ public class SisterMove : MonoBehaviour
 
 
 
-      
+
         float fireKey = Input.GetAxis("Fire1");
 
 
@@ -146,39 +160,76 @@ public class SisterMove : MonoBehaviour
 
     }
 
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (!isDown && !GManager.instance.isGameOver)
+        {
+            if (collision.collider.tag == enemyTag)
+                    {
+                        anim.Play("Sisterdown");
+                        isDown = true;
+                     
+                        
+                    }
+                }
+            
+            //動く床
+            else if (collision.collider.tag == moveFloorTag)
+            {
+                //踏みつけ判定になる高さ
+                float stepOnHeight = (capcol.size.y * (stepOnRate / 100f));
+                //踏みつけ判定のワールド座標
+                float judgePos = transform.position.y - (capcol.size.y / 2f) + stepOnHeight;
+                foreach (ContactPoint2D p in collision.contacts)
+                {
+                    //動く床に乗っている
+                    if (p.point.y < judgePos)
+                    {
+                        moveObj = collision.gameObject.GetComponent<MoveObject>();
+                    }
+                }
+            }
+        }
+    
+
+
+
+
     private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.tag == groundTag || collision.tag == moveFloorTag)
         {
-            if (collision.tag == groundTag)
-            {
-                isGroundEnter = true;
-            }
+            isGroundEnter = true;
         }
-        private void OnTriggerStay2D(Collider2D collision)
+    }
+
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.tag == groundTag || collision.tag == moveFloorTag)
         {
-            if (collision.tag == groundTag)
-            {
-                isGroundStay = true;
-            }
+            isGroundStay = true;
         }
-        private void OnTriggerExit2D(Collider2D collision)
+
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.tag == groundTag || collision.tag == moveFloorTag)
         {
-            if (collision.tag == groundTag)
-            {
-                isGroundExit = true;
-            }
+            isGroundExit = true;
         }
+    }
 
     public void Attack()
     {
 
-    
-       
+
+
     }
-   
+
 
 
 
 }
 
-    
+
 
