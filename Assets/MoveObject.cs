@@ -26,7 +26,10 @@ public class MoveObject : MonoBehaviour
             oldPos = rb.position;
         }
     }
-
+    public Vector2 GetVelocity()
+    {
+        return myVelocity;
+    }
 
     private void FixedUpdate()
     {

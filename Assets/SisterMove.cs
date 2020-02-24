@@ -36,8 +36,7 @@ public class SisterMove : MonoBehaviour
     CapsuleCollider2D capcol;
     string enemyTag = "Enemy";
     bool isDown;
-
-
+    private float xSpeed;
 
     void Start()
     {
@@ -50,147 +49,155 @@ public class SisterMove : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        anim.SetBool("jump", isJump);
-        anim.SetBool("ground", isGround);
-        anim.SetBool("attack", isAttack);
-
-        if (isGroundEnter || isGroundStay)
+        //float xSpeed = 0f;
+        //float ySpeed = -gravity;
+        if (!isDown && !GManager.instance.isGameOver)
         {
-            isGround = true;
-        }
-        else if (isGroundExit)
-        {
-            isGround = false;
-        }
+            anim.SetBool("jump", isJump);
+            anim.SetBool("ground", isGround);
+            anim.SetBool("attack", isAttack);
 
 
-        float horizontalkey = Input.GetAxis("Horizontal");
-        float xSpeed = 0.0f;
-        float ySpeed = -gravity;
-        if (horizontalkey > 0)
-        {
-            anim.SetBool("run", true);
-            transform.localScale = new Vector3(1, 1, 1);
-            xSpeed = speed;
-            dashTime += Time.deltaTime;
-        }
-        else if (horizontalkey < 0)
-        {
-            anim.SetBool("run", true);
-            transform.localScale = new Vector3(-1, 1, 1);
-            xSpeed = -speed;
-            dashTime += Time.deltaTime;
-        }
-        else
-        {
-            anim.SetBool("run", false);
-            xSpeed = 0.0f;
-            dashTime = 0.0f;
-        }
 
-        float verticalkey = Input.GetAxis("Vertical");
 
-        if (isGround)
-        {
-            if (verticalkey > 0)
+
+            //else
+            //{
+            //rb.velocity = new Vector2(0, -gravity);
+
+            //}
+
+            if (isGroundEnter || isGroundStay)
             {
-                ySpeed = jumpSpeed;
-                jumpPos = transform.position.y;//ジャンプ位置記録
-                isJump = true;
+                isGround = true;
+            }
+            else if (isGroundExit)
+            {
+                isGround = false;
+            }
+
+
+            float horizontalkey = Input.GetAxis("Horizontal");
+            float xSpeed = 0.0f;
+            float ySpeed = -gravity;
+            if (horizontalkey > 0)
+            {
+                anim.SetBool("run", true);
+                transform.localScale = new Vector3(1, 1, 1);
+                xSpeed = speed;
+                dashTime += Time.deltaTime;
+            }
+            else if (horizontalkey < 0)
+            {
+                anim.SetBool("run", true);
+                transform.localScale = new Vector3(-1, 1, 1);
+                xSpeed = -speed;
+                dashTime += Time.deltaTime;
             }
             else
             {
-                isJump = false;
+                anim.SetBool("run", false);
+                xSpeed = 0.0f;
+                dashTime = 0.0f;
             }
-        }
-        else if (isJump)
-        {
-            if (verticalkey > 0 && jumpPos + jumpHeight > transform.position.y)
+
+            float verticalkey = Input.GetAxis("Vertical");
+
+            if (isGround)
             {
-                ySpeed = jumpSpeed;
-                jumpTime += Time.deltaTime;
+                if (verticalkey > 0)
+                {
+                    ySpeed = jumpSpeed;
+                    jumpPos = transform.position.y;//ジャンプ位置記録
+                    isJump = true;
+                }
+                else
+                {
+                    isJump = false;
+                }
             }
+            else if (isJump)
+            {
+                if (verticalkey > 0 && jumpPos + jumpHeight > transform.position.y)
+                {
+                    ySpeed = jumpSpeed;
+                    jumpTime += Time.deltaTime;
+                }
+                else
+                {
+                    isJump = false;
+                }
+                jumpTime = 0.0f;
+            }
+
+            dashTime *= dashCurve.Evaluate(dashTime);
+            if (isJump)
+            {
+                ySpeed *= jumpCurve.Evaluate(jumpTime);
+            }
+
+            //rb.velocity = new Vector2(xSpeed, ySpeed);
+
+            //移動速度を設定
+            Vector2 addVelocity = Vector2.zero;
+            if (moveObj != null)
+            {
+                addVelocity = moveObj.GetVelocity();
+            }
+            rb.velocity = new Vector2(xSpeed, ySpeed) + addVelocity;
+
+
+            isGroundEnter = false;
+            isGroundStay = false;
+            isGroundExit = false;
+
+            //アタックを入れるとこ
+
+
+
+
+            float fireKey = Input.GetAxis("Fire1");
+
+
+            if (fireKey > 0 && !move.isAttackDisabled()) //&& beforeAttack == 0.0f)
+            {
+                isAttack = true;
+                horizontalkey = 0.0f;
+                move.disableFinishAt = 0.0f;
+
+
+            }
+
             else
             {
-                isJump = false;
+                isAttack = false;
             }
-            jumpTime = 0.0f;
-        }
+            //beforeAttack = fireKey;
 
-        dashTime *= dashCurve.Evaluate(dashTime);
-        if (isJump)
-        {
-            ySpeed *= jumpCurve.Evaluate(jumpTime);
-        }
+            if (isAttack)
+            {
+                move.DisableAttack();
 
-        rb.velocity = new Vector2(xSpeed, ySpeed);
-
-        isGroundEnter = false;
-        isGroundStay = false;
-        isGroundExit = false;
-
-        //アタックを入れるとこ
-
-
-
-
-        float fireKey = Input.GetAxis("Fire1");
-
-
-        if (fireKey > 0 && !move.isAttackDisabled()) //&& beforeAttack == 0.0f)
-        {
-            isAttack = true;
-            horizontalkey = 0.0f;
-            move.disableFinishAt = 0.0f;
-
+            }
 
         }
-
-        else
-        {
-            isAttack = false;
-        }
-        //beforeAttack = fireKey;
-
-        if (isAttack)
-        {
-            move.DisableAttack();
-
-        }
-
     }
+
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (!isDown && !GManager.instance.isGameOver)
         {
             if (collision.collider.tag == enemyTag)
-                    {
-                        anim.Play("Sisterdown");
-                        isDown = true;
-                     
-                        
-                    }
-                }
-            
-            //動く床
-            else if (collision.collider.tag == moveFloorTag)
             {
-                //踏みつけ判定になる高さ
-                float stepOnHeight = (capcol.size.y * (stepOnRate / 100f));
-                //踏みつけ判定のワールド座標
-                float judgePos = transform.position.y - (capcol.size.y / 2f) + stepOnHeight;
-                foreach (ContactPoint2D p in collision.contacts)
-                {
-                    //動く床に乗っている
-                    if (p.point.y < judgePos)
-                    {
-                        moveObj = collision.gameObject.GetComponent<MoveObject>();
-                    }
-                }
+                anim.Play("SisterDown");
+                isDown = true;
+                //GManager.instance.SubHeartNum();
+                //GManager.instance.PlaySE(downSE);
+
             }
         }
-    
+    }
 
 
 
@@ -200,6 +207,15 @@ public class SisterMove : MonoBehaviour
         if (collision.tag == groundTag || collision.tag == moveFloorTag)
         {
             isGroundEnter = true;
+        }
+       
+
+        //動く床
+         if (collision.tag == moveFloorTag)
+        {
+
+            moveObj = collision.gameObject.GetComponent<MoveObject>();
+
         }
     }
 
@@ -216,6 +232,11 @@ public class SisterMove : MonoBehaviour
         if (collision.tag == groundTag || collision.tag == moveFloorTag)
         {
             isGroundExit = true;
+        }
+        if (collision.tag == moveFloorTag)
+        {
+            //動く床から離れた
+            moveObj = null;
         }
     }
 

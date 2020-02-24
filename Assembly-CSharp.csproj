@@ -88,6 +88,7 @@
     <Compile Include="Assets\Anima2D\Scripts\SpriteMeshAnimation.cs" />
     <Compile Include="Assets\Anima2D\Scripts\SpriteMeshInstance.cs" />
     <Compile Include="Assets\Display.cs" />
+    <Compile Include="Assets\Enemy1.cs" />
     <Compile Include="Assets\GManager.cs" />
     <Compile Include="Assets\Heart.cs" />
     <Compile Include="Assets\InputProxy.cs" />
