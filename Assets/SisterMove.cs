@@ -13,7 +13,9 @@ public class SisterMove : MonoBehaviour
     public AnimationCurve jumpCurve;
     public GameObject sister;
     public float stepOnRate;
+    public GameObject attack;
     MoveObject moveObj;
+
 
 
     PlayerActionManager move;
@@ -37,18 +39,22 @@ public class SisterMove : MonoBehaviour
     string enemyTag = "Enemy";
     bool isDown;
     private float xSpeed;
+    BoxCollider2D at;
 
     void Start()
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         move = sister.GetComponent<PlayerActionManager>();
+        at = attack.GetComponent<BoxCollider2D>();
+   
 
     }
 
     // Update is called once per frame
     void FixedUpdate()
     {
+        
         //float xSpeed = 0f;
         //float ySpeed = -gravity;
         if (!isDown && !GManager.instance.isGameOver)
@@ -164,7 +170,7 @@ public class SisterMove : MonoBehaviour
                 isAttack = true;
                 horizontalkey = 0.0f;
                 move.disableFinishAt = 0.0f;
-
+               
 
             }
 
@@ -181,6 +187,13 @@ public class SisterMove : MonoBehaviour
             }
 
         }
+
+        if (isDown)
+        {
+
+
+        }
+
     }
 
 

@@ -363,7 +363,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.05894466
+  m_Length: 0.058944914
   m_ChildTransform: {fileID: 1696609741}
   m_AttachedIK: {fileID: 0}
 --- !u!1 &102754046
@@ -1513,12 +1513,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705102857}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 83.03, y: 3.85, z: 0}
+  m_LocalPosition: {x: 80.45, y: 4.19, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1483123872}
   - {fileID: 462589546}
   - {fileID: 705507995}
+  - {fileID: 761698415}
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1672,6 +1673,7 @@ MonoBehaviour:
     m_RotationOrder: 4
   sister: {fileID: 705102857}
   stepOnRate: 10
+  attack: {fileID: 0}
 --- !u!70 &705102866
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -1701,7 +1703,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sister: {fileID: 705102857}
-  disableFinishAt: 1.5
+  disableFinishAt: 0.5
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -1793,6 +1795,63 @@ Transform:
   m_Father: {fileID: 705102861}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &761698414
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 761698415}
+  - component: {fileID: 761698416}
+  m_Layer: 0
+  m_Name: Attack
+  m_TagString: Attack
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &761698415
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761698414}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0.6100006, y: -0.29999995, z: -3.7787423}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 705102861}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!61 &761698416
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 761698414}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.14742279, y: 0.22464383}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.99531555, y: 1.5037463}
+  m_EdgeRadius: 0
 --- !u!1 &809698486
 GameObject:
   m_ObjectHideFlags: 0
@@ -2040,7 +2099,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.11966143
+  m_Length: 0.11966119
   m_ChildTransform: {fileID: 2144502551}
   m_AttachedIK: {fileID: 0}
 --- !u!1 &868603404
@@ -2352,7 +2411,7 @@ MonoBehaviour:
       defaultLocalRotation: {x: 0, y: 0, z: 0, w: 1}
     m_Weight: 1
     m_RestoreDefaultPose: 1
-    targetPosition: {x: 82.93718, y: 3.0068061, z: 0.0001835823}
+    targetPosition: {x: 80.35718, y: 3.3468063, z: 0.0001835823}
     flip: 1
 --- !u!1 &963194225
 GameObject:
@@ -2433,7 +2492,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 83.03, y: 3.85, z: -10}
+  m_LocalPosition: {x: 80.45, y: 4.19, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2991,7 +3050,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.09292443
+  m_Length: 0.0929242
   m_ChildTransform: {fileID: 70991235}
   m_AttachedIK: {fileID: 0}
 --- !u!1 &1134364312
@@ -3603,7 +3662,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.079753116
+  m_Length: 0.07975336
   m_ChildTransform: {fileID: 594927749}
   m_AttachedIK: {fileID: 0}
 --- !u!1 &1269872623
@@ -4540,7 +4599,7 @@ MonoBehaviour:
       defaultLocalRotation: {x: 0, y: 0, z: 0, w: 1}
     m_Weight: 1
     m_RestoreDefaultPose: 1
-    targetPosition: {x: 83.17389, y: 3.0103788, z: -0.00006055832}
+    targetPosition: {x: 80.59389, y: 3.350379, z: -0.00006055832}
     flip: 1
 --- !u!1 &1603014990
 GameObject:
@@ -4957,7 +5016,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.2100004
+  m_Length: 0.21000016
   m_ChildTransform: {fileID: 198690071}
   m_AttachedIK: {fileID: 0}
 --- !u!1 &1747088050
@@ -5345,7 +5404,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.1930469
+  m_Length: 0.19304714
   m_ChildTransform: {fileID: 1734997181}
   m_AttachedIK: {fileID: 0}
 --- !u!1 &1831609725
@@ -5865,7 +5924,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1996287644}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 83.03, y: 3.85, z: -10}
+  m_LocalPosition: {x: 80.45, y: 4.19, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2060109010}
@@ -7977,7 +8036,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2113410096}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 86.57, y: 3.86, z: 0}
+  m_LocalPosition: {x: 86.69, y: 3.84, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 234092348}
@@ -8081,6 +8140,7 @@ MonoBehaviour:
   speed: 4
   gravity: 8
   nonVisibleAct: 0
+  player: {fileID: 705102857}
 --- !u!212 &2113410103
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -8189,7 +8249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Length: 0.13448091
+  m_Length: 0.13448067
   m_ChildTransform: {fileID: 1238314310}
   m_AttachedIK: {fileID: 0}
 --- !u!1 &2144502550
