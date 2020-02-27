@@ -39,14 +39,14 @@ public class SisterMove : MonoBehaviour
     string enemyTag = "Enemy";
     bool isDown;
     private float xSpeed;
-    BoxCollider2D at;
+    //BoxCollider2D at;
 
     void Start()
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         move = sister.GetComponent<PlayerActionManager>();
-        at = attack.GetComponent<BoxCollider2D>();
+        //at = attack.GetComponent<BoxCollider2D>();
    
 
     }
@@ -188,10 +188,9 @@ public class SisterMove : MonoBehaviour
 
         }
 
-        if (isDown)
-        {
-
-
+        if (IsDownAnimEnd()) {
+            isDown = false;
+            anim.Play("SisterStand");
         }
 
     }
@@ -203,17 +202,48 @@ public class SisterMove : MonoBehaviour
         {
             if (collision.collider.tag == enemyTag)
             {
-                anim.Play("SisterDown");
+                anim.Play("SisterDamage");
                 isDown = true;
-                //GManager.instance.SubHeartNum();
+                GManager.instance.SubHeartNum();
                 //GManager.instance.PlaySE(downSE);
+               
 
             }
         }
     }
 
 
+    /// <summary>
+    /// ダウンアニメーションが終わっているかどうか
+    /// </summary>
+    /// <returns>終了しているかどうか</returns> 
+    public bool IsDownAnimEnd()
+    {
+        if (isDown && anim != null)
+        {
+            AnimatorStateInfo currentState = anim.GetCurrentAnimatorStateInfo(0);
+            if (currentState.IsName("SisterDamage"))
+            {
+                if (currentState.normalizedTime >= 1)
+                {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
 
+    /// <summary>
+    /// コンティニューする
+    /// </summary>
+    public void ContinuePlayer()
+    {
+        isDown = false;
+        anim.Play("SisterStand");
+        isJump = false;
+       
+      
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

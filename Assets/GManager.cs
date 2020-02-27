@@ -34,4 +34,19 @@ public class GManager : MonoBehaviour
     {
 
     }
+
+    /// <summary>
+    /// 残機を１つ減らす
+    /// </summary>
+    public void SubHeartNum()
+    {
+        if (heartNum > 0)
+        {
+            --heartNum;
+        }
+        else
+        {
+            isGameOver = true;
+        }
+    }
 }

@@ -87,6 +87,7 @@
     <Compile Include="Assets\Anima2D\Scripts\SpriteMesh.cs" />
     <Compile Include="Assets\Anima2D\Scripts\SpriteMeshAnimation.cs" />
     <Compile Include="Assets\Anima2D\Scripts\SpriteMeshInstance.cs" />
+    <Compile Include="Assets\ColliderController.cs" />
     <Compile Include="Assets\Display.cs" />
     <Compile Include="Assets\Enemy1.cs" />
     <Compile Include="Assets\GManager.cs" />
@@ -95,6 +96,7 @@
     <Compile Include="Assets\MoveObject.cs" />
     <Compile Include="Assets\PlayerActionManager.cs" />
     <Compile Include="Assets\SisterMove.cs" />
+    <Compile Include="Assets\StageCtrl.cs" />
     <Compile Include="Assets\Title.cs" />
     <None Include="Assets\Anima2D\Examples\Shaders\VisibleInsideMask.shader" />
     <None Include="Assets\Anima2D\Examples\Shaders\VisibleOutsideMask.shader" />
