@@ -21,7 +21,7 @@ public class StageCtrl : MonoBehaviour
                 Destroy(this);
             }
         }
-        else
+        else//← これはif (playerObj != null～のループに対応、その反対。 
         {
             Debug.Log("ステージコントローラーの設定が足りていません");
             Destroy(this);

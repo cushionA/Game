@@ -15,7 +15,8 @@ public class SisterMove : MonoBehaviour
     public float stepOnRate;
     public GameObject attack;
     MoveObject moveObj;
-
+    [HideInInspector] public bool isContinue = false;
+    [HideInInspector] public float continueTime, blinkTime;
 
 
     PlayerActionManager move;
@@ -39,19 +40,37 @@ public class SisterMove : MonoBehaviour
     string enemyTag = "Enemy";
     bool isDown;
     private float xSpeed;
-    //BoxCollider2D at;
+    
+
 
     void Start()
     {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         move = sister.GetComponent<PlayerActionManager>();
-        //at = attack.GetComponent<BoxCollider2D>();
-   
 
     }
 
     // Update is called once per frame
+
+    public void Update()
+    {
+
+        if (continueTime > 1.0f)
+        {
+            isContinue = false;
+            blinkTime = 0f;
+            continueTime = 0f;
+           
+        }
+        else
+        {
+            blinkTime += Time.deltaTime;
+            continueTime += Time.deltaTime;
+
+        }
+    }
+
     void FixedUpdate()
     {
         
@@ -241,8 +260,9 @@ public class SisterMove : MonoBehaviour
         isDown = false;
         anim.Play("SisterStand");
         isJump = false;
-       
-      
+        isContinue = true;
+     
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
