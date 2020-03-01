@@ -2,28 +2,26 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Enemy1 : MonoBehaviour
+public class Enemy2 : MonoBehaviour
 {
-
     #region//インスペクターで設定する
     [Header("移動速度")] public float speed;
     [Header("重力")] public float gravity;
     [Header("画面外でも行動する")] public bool nonVisibleAct;
-    public GameObject player;
-
+    [HideInInspector]public bool move;
+    [HideInInspector] public bool left = false;
     #endregion
 
     #region//プライベート変数
     private Rigidbody2D rb = null;
     private SpriteRenderer sr = null;
     private Animator anim = null;
-    bool right;
     private BoxCollider2D col = null;
     private bool isDead = false;
     private float deadTimer = 0.0f;
-    Transform rbs;
     float playerPos;
     string attackTag = "Attack";
+  
     #endregion
 
     // Start is called before the first frame update
@@ -31,8 +29,7 @@ public class Enemy1 : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         sr = GetComponent<SpriteRenderer>();
-        anim = GetComponent<Animator>();
-        rbs = player.GetComponent<Transform>();
+        anim = GetComponent<Animator>();       
         col = GetComponent<BoxCollider2D>();
     }
 
@@ -40,39 +37,29 @@ public class Enemy1 : MonoBehaviour
 
     void FixedUpdate()
     {
-       
 
-        if (sr.isVisible || nonVisibleAct)
+
+        if (move)
+        {
+
+
+        
+
+            int xVector = -1;
+            if (left)
             {
 
-            
-            playerPos = rbs.position.x;
-
-            if(playerPos - transform.position.x > 0)
-            {
-                right = true;
-
+                xVector = 1;
+                transform.localScale = new Vector3(1, 1, 1);
             }
             else
             {
-                right = false;
-            }
-
-            int xVector = -1;
-                if (right)
-                {
-
-                    xVector = 1;
-                transform.localScale = new Vector3(1, 1, 1);
-                }
-                else
-                {
                 transform.localScale = new Vector3(-1, 1, 1);
-                }
-                rb.velocity = new Vector2(xVector * speed, -gravity);
-                anim.SetBool("walk", true);
-           
             }
+            rb.velocity = new Vector2(xVector * speed, -gravity);
+            anim.SetBool("walk", true);
+
+        }
 
 
         /* else
@@ -85,25 +72,25 @@ public class Enemy1 : MonoBehaviour
                  isDead = true;
                  col.enabled = false;
              }*/
-        if(isDead)
+        if (isDead)
         {
-                transform.Rotate(new Vector3(0, 0, 5));
-                if (deadTimer > 3.0f)
-                //死んだフレームから何秒？
-                {
-                    Destroy(this.gameObject);
-                }
-                else
-                {
-                    deadTimer += Time.deltaTime;
-                }
+            transform.Rotate(new Vector3(0, 0, 5));
+            if (deadTimer > 3.0f)
+            //死んだフレームから何秒？
+            {
+                Destroy(this.gameObject);
+            }
+            else
+            {
+                deadTimer += Time.deltaTime;
             }
         }
-    
+    }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if(collision.tag == attackTag)
+        if (collision.tag == attackTag)
         {
 
             if (!isDead)
@@ -113,11 +100,11 @@ public class Enemy1 : MonoBehaviour
                 isDead = true;
                 col.enabled = false;
             }
-           
+
 
         }
-        
-    }}
-  
-        
- 
+
+
+
+    }
+}

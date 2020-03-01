@@ -7,7 +7,9 @@ public class GManager : MonoBehaviour
     public static GManager instance = null;//GM型のinstanceという名のインスタンスに無を入れる
     public int continueNum = 0;
     public int heartNum = 5;
+    public int defaultHeartNum = 5;
     [HideInInspector]public bool isGameOver;
+
 
 
 
@@ -40,7 +42,7 @@ public class GManager : MonoBehaviour
     /// </summary>
     public void SubHeartNum()
     {
-        if (heartNum > 0)
+        if (heartNum > 1)
         {
             --heartNum;
         }
@@ -49,4 +51,8 @@ public class GManager : MonoBehaviour
             isGameOver = true;
         }
     }
+
+  
+
+
 }

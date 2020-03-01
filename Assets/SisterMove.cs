@@ -17,7 +17,7 @@ public class SisterMove : MonoBehaviour
     MoveObject moveObj;
     [HideInInspector] public bool isContinue = false;
     [HideInInspector] public float continueTime, blinkTime;
-
+    [HideInInspector]public bool isDown;
 
     PlayerActionManager move;
 
@@ -38,7 +38,6 @@ public class SisterMove : MonoBehaviour
     float judgePos;
     CapsuleCollider2D capcol;
     string enemyTag = "Enemy";
-    bool isDown;
     private float xSpeed;
     
 
@@ -56,7 +55,7 @@ public class SisterMove : MonoBehaviour
     public void Update()
     {
 
-        if (continueTime > 1.0f)
+        if (continueTime > 2.0f)
         {
             isContinue = false;
             blinkTime = 0f;
@@ -209,6 +208,7 @@ public class SisterMove : MonoBehaviour
 
         if (IsDownAnimEnd()) {
             isDown = false;
+        
             anim.Play("SisterStand");
         }
 
@@ -223,6 +223,7 @@ public class SisterMove : MonoBehaviour
             {
                 anim.Play("SisterDamage");
                 isDown = true;
+                isContinue = true;
                 GManager.instance.SubHeartNum();
                 //GManager.instance.PlaySE(downSE);
                

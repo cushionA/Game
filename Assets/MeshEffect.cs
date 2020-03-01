@@ -22,7 +22,7 @@ public class MeshEffect : MonoBehaviour
     {//updateはレンダリングの前に呼ばれるので画面表示の前に差し込める。
         if (act.isContinue)
         {
-            Debug.Log("点滅");
+           
             //明滅　ついている時に戻る
             if (act.blinkTime > 0.2f)
             {
@@ -39,17 +39,18 @@ public class MeshEffect : MonoBehaviour
             {
                 sr.enabled = true;
             }
-            //------------------------------------------------------
-            //ここで区切る。一秒経ってないうちはデルタタイムする。
+        }
+        //------------------------------------------------------
+        //ここで区切る。一秒経ってないうちはデルタタイムする。
 
-            //1秒たったら明滅終わり
-            if (act.continueTime > 1.0f)
-            {
-               
-               
-                sr.enabled = true;
-            }
+        //1秒たったら明滅終わり
+        else
+        {
+
+
+            sr.enabled = true;
+        }
            
         }
     }
-}
+

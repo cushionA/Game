@@ -6,6 +6,7 @@ public class DeadPoint : MonoBehaviour
 {
     [Header("ステージコントローラー")] public StageCtrl ctrl;
 
+ 
     private string playerTag = "Player";
     Collider2D col;
 
@@ -19,11 +20,11 @@ public class DeadPoint : MonoBehaviour
       
         if (collision.tag == playerTag)
         {
-            col.enabled = false;
+          
             if (GManager.instance != null && ctrl != null)
             {
                 GManager.instance.SubHeartNum();
-               
+                col.enabled = false;
                 if (!GManager.instance.isGameOver)
                 {
                     ctrl.PlayerSetContinuePoint();

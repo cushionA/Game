@@ -6,7 +6,7 @@ public class StageCtrl : MonoBehaviour
 {
     [Header("プレイヤーゲームオブジェクト")] public GameObject playerObj;
     [Header("コンティニュー位置")] public GameObject[] continuePoint;
-
+    [Header("ゲームオーバー")] public GameObject GameOverObj;
     private SisterMove p;
 
     void Start()
@@ -28,7 +28,25 @@ public class StageCtrl : MonoBehaviour
         }
     }
 
-  
+
+    private void Update()
+    {
+        if (GManager.instance.isGameOver)
+        {
+            GameOverObj.SetActive(true);
+         
+
+        }
+        else
+        {
+            GameOverObj.SetActive(false);
+
+        }
+
+        
+    }
+
+
     /// <summary>
     /// プレイヤーをコンティニューポイントへ移動する
     /// </summary>

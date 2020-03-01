@@ -91,12 +91,17 @@
     <Compile Include="Assets\DeadPoint.cs" />
     <Compile Include="Assets\Display.cs" />
     <Compile Include="Assets\Enemy1.cs" />
+    <Compile Include="Assets\Enemy2.cs" />
+    <Compile Include="Assets\Escape.cs" />
+    <Compile Include="Assets\GameOver.cs" />
     <Compile Include="Assets\GManager.cs" />
     <Compile Include="Assets\Heart.cs" />
     <Compile Include="Assets\InputProxy.cs" />
     <Compile Include="Assets\MeshEffect.cs" />
     <Compile Include="Assets\MoveObject.cs" />
     <Compile Include="Assets\PlayerActionManager.cs" />
+    <Compile Include="Assets\Serch.cs" />
+    <Compile Include="Assets\Serch2.cs" />
     <Compile Include="Assets\SisterMove.cs" />
     <Compile Include="Assets\StageCtrl.cs" />
     <Compile Include="Assets\Title.cs" />
