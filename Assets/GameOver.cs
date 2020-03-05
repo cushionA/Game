@@ -22,10 +22,12 @@ public class GameOver : MonoBehaviour
     public void RetryGame()
     {
         GManager.instance.isGameOver = false;
+        GManager.instance.isClear = false;
         GManager.instance.heartNum = GManager.instance.defaultHeartNum;
         GManager.instance.continueNum = 0;
         stg.PlayerSetContinuePoint();
-     
+        //GManagerの数値を初期化するのはシーン切り替えでもインスタンスが破棄されないから。Static。
+        SceneManager.LoadScene("Stage");
     }
 
 

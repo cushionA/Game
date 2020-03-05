@@ -75,7 +75,7 @@ public class SisterMove : MonoBehaviour
         
         //float xSpeed = 0f;
         //float ySpeed = -gravity;
-        if (!isDown && !GManager.instance.isGameOver)
+        if (!isDown && !GManager.instance.isGameOver && !GManager.instance.isClear)
         {
             anim.SetBool("jump", isJump);
             anim.SetBool("ground", isGround);

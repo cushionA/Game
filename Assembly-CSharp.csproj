@@ -88,10 +88,12 @@
     <Compile Include="Assets\Anima2D\Scripts\SpriteMeshAnimation.cs" />
     <Compile Include="Assets\Anima2D\Scripts\SpriteMeshInstance.cs" />
     <Compile Include="Assets\ColliderController.cs" />
+    <Compile Include="Assets\Confirm.cs" />
     <Compile Include="Assets\DeadPoint.cs" />
     <Compile Include="Assets\Display.cs" />
     <Compile Include="Assets\Enemy1.cs" />
     <Compile Include="Assets\Enemy2.cs" />
+    <Compile Include="Assets\Enemy3.cs" />
     <Compile Include="Assets\Escape.cs" />
     <Compile Include="Assets\GameOver.cs" />
     <Compile Include="Assets\GManager.cs" />

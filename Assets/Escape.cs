@@ -30,7 +30,7 @@ public class Escape : MonoBehaviour
         if(sis.isContinue){
             GetLayer();
             SetLayer(8);
-            Debug.Log("回避");
+   
 
         }
         else

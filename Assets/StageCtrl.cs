@@ -1,18 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class StageCtrl : MonoBehaviour
 {
     [Header("プレイヤーゲームオブジェクト")] public GameObject playerObj;
     [Header("コンティニュー位置")] public GameObject[] continuePoint;
     [Header("ゲームオーバー")] public GameObject GameOverObj;
+    [Header("ゲームオーバー")] public GameObject ClearObj;
     private SisterMove p;
+    private bool doGameOver = false; //New!
+    private bool startFade = false; //New!
 
     void Start()
     {
-        if (playerObj != null && continuePoint != null && continuePoint.Length > 0)
+        if (playerObj != null && continuePoint != null && continuePoint.Length > 0 && GameOverObj != null) //New!
         {
+            GameOverObj.SetActive(false); //New!
+            ClearObj.SetActive(false);
             playerObj.transform.position = continuePoint[0].transform.position;
             p = playerObj.GetComponent<SisterMove>();
             if (p == null)
@@ -21,7 +27,7 @@ public class StageCtrl : MonoBehaviour
                 Destroy(this);
             }
         }
-        else//← これはif (playerObj != null～のループに対応、その反対。 
+        else
         {
             Debug.Log("ステージコントローラーの設定が足りていません");
             Destroy(this);
@@ -31,20 +37,22 @@ public class StageCtrl : MonoBehaviour
 
     private void Update()
     {
+        //ゲームオーバー New
         if (GManager.instance.isGameOver)
         {
             GameOverObj.SetActive(true);
-         
-
+           
         }
-        else
+        //プレイヤーがダメージを受けた
+        else if (GManager.instance.isClear)
         {
-            GameOverObj.SetActive(false);
+
+            ClearObj.SetActive(true);
 
         }
 
-        
     }
+
 
 
     /// <summary>
@@ -56,3 +64,4 @@ public class StageCtrl : MonoBehaviour
         p.ContinuePlayer();
     }
 }
+   

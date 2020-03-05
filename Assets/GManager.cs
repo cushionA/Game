@@ -9,11 +9,12 @@ public class GManager : MonoBehaviour
     public int heartNum = 5;
     public int defaultHeartNum = 5;
     [HideInInspector]public bool isGameOver;
+    [HideInInspector] public bool isClear;
 
 
 
 
-    
+
     private void Awake()
     {
         //これによりオープニングとかステージ2とかのほかのシーンに行ってもオブジェクトが破棄されない。
