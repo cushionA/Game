@@ -49,6 +49,7 @@ public class GManager : MonoBehaviour
         }
         else
         {
+            --heartNum;
             isGameOver = true;
         }
     }

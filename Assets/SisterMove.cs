@@ -205,6 +205,10 @@ public class SisterMove : MonoBehaviour
             }
 
         }
+        else if(GManager.instance.isClear || GManager.instance.isGameOver){
+            rb.velocity = new Vector2(0, 0);
+
+        }
 
         if (IsDownAnimEnd()) {
             isDown = false;

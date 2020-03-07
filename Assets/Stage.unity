@@ -144,7 +144,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 999215}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 97.9, y: 12.9, z: -53.203724}
+  m_LocalPosition: {x: -4.98, y: 0.38, z: -53.203724}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1983,15 +1983,15 @@ RectTransform:
   m_GameObject: {fileID: 493719048}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.34462133, y: 0.44980767, z: 0.87466526}
+  m_LocalScale: {x: 0.06180761, y: 0.109301865, z: 0.129796}
   m_Children:
   - {fileID: 855313292}
-  m_Father: {fileID: 1303006698}
-  m_RootOrder: 0
+  m_Father: {fileID: 657619250}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -30.3, y: -70.8}
+  m_AnchoredPosition: {x: 4.24, y: -5.3}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &493719050
@@ -2732,6 +2732,7 @@ RectTransform:
   m_LocalScale: {x: 16.17924, y: 9.148975, z: 7.7044}
   m_Children:
   - {fileID: 1303006698}
+  - {fileID: 493719049}
   m_Father: {fileID: 1972839251}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -3730,7 +3731,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 753779320}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 127.4, y: 7.7, z: 1}
+  m_LocalPosition: {x: 100.47, y: 7.63, z: 1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 2019198966}
@@ -6642,8 +6643,7 @@ RectTransform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.17934933, y: 0.24299687, z: 0.14839503}
-  m_Children:
-  - {fileID: 493719049}
+  m_Children: []
   m_Father: {fileID: 657619250}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -9735,6 +9735,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1966479300}
   - component: {fileID: 1966479299}
+  - component: {fileID: 1966479301}
   m_Layer: 0
   m_Name: StageM
   m_TagString: Untagged
@@ -9773,6 +9774,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1966479301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1966479298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbe9b4026524ff54fbc9d7fc58959126, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1972839247
 GameObject:
   m_ObjectHideFlags: 0

@@ -46,7 +46,7 @@ public class StageCtrl : MonoBehaviour
         //プレイヤーがダメージを受けた
         else if (GManager.instance.isClear)
         {
-
+            //表示
             ClearObj.SetActive(true);
 
         }
